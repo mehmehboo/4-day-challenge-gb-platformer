@@ -10,7 +10,7 @@ int frame = 0;
 int col = 0;
 int height = 18;
 int width = 32;
-char hex[] = {0x01, 0x02};
+int hex[] = {0, 1};
 
 UBYTE keypress;
 
@@ -31,7 +31,6 @@ int main() {
 
     while(1){
         keypress = joypad();
-        col = check_col(placeholdermap, 2);
 
         frame += 1;
 
@@ -40,10 +39,25 @@ int main() {
         }
 
         if(frame == 200) {
+            col = check_col(placeholdermap, 2, hex, x, y + 1, width);
             if(col == 0) {
                 y += 1;
                 if(y > 18) {
                     y = 14;
+                }
+            }
+        }
+        if(frame == 100) {
+            col = check_col(placeholdermap, 2, hex, x, y, width);
+            if(col == 0) {
+                if(keypress == J_RIGHT) {
+                    x += 1;
+                }
+            }
+            col = check_col(placeholdermap, 2, hex, x - 1, y, width);
+            if(col == 0) {
+                if(keypress == J_LEFT) {
+                    x -= 1;
                 }
             }
         }

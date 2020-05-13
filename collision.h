@@ -1,21 +1,18 @@
 int check = 0;
-int n = 0;
-extern int height;
-extern char hex[];
-extern int x;
-extern int y;
+int n;
 
-int check_col(unsigned char bkg[], int len){
-    check = height * (y / 2) + (x / 2);
+int check_col(unsigned char bkg[], int len, int hex[], int x, int y, int width){
+    check = width * y + x;
+    len = len - 0;
+    hex = hex - 0;
 
-    while(n < len) {
-        if(bkg[check] == hex[n]){
-            return 1;
+    for(n = 0; n < len; n += 1) {
+        if(bkg[check] == hex[n]) {
+            return 0;
         }
 
         else {
-            return 0;
+            return 1;
         }
-        n += 1;
     }
 }
