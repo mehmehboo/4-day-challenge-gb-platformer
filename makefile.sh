@@ -11,4 +11,4 @@
 
 wine /opt/bgbw64/bgb64 main.gb
 
-clear
+#clear

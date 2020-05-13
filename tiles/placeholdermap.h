@@ -1,4 +1,4 @@
-#include "../tiles/placeholdermap.c"
+#include "tiles/placeholdermap.c"
 
 #define placeholdermapWidth 32
 #define placeholdermapHeight 18
