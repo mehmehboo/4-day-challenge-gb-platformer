@@ -1,0 +1,20 @@
+XL
+H 9 areas 2 global symbols
+M lcc57500
+S __initrleblock Ref0000
+A _CODE size 0 flags 0
+A _DATA size 30 flags 0
+S _placeholder Def0000
+A _OVERLAY size 0 flags 0
+A _ISEG size 0 flags 0
+A _BSEG size 0 flags 0
+A _XSEG size 0 flags 0
+A _GSINIT size 2A flags 0
+A _GSFINAL size 0 flags 0
+A _HOME size 0 flags 0
+T 00 00 21 00 00 CD 00 00 20 28 0E 8A 1D E3 E3 64
+R 00 00 06 00 00 03 01 00 02 06 00 00
+T 0E 00 B8 A8 32 FF FF 55 A4 94 4F 7E 7E FE 81 FE
+R 00 00 06 00
+T 1C 00 81 FE 81 FE 81 FE 81 FE 81 00 7E F0 00 00
+R 00 00 06 00
